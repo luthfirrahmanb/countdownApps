@@ -21,7 +21,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div className="App-title">Countdown to {this.state.deadline}</div>
+                <div className="App-title">Countdown to <span>{this.state.deadline}</span></div>
 
                 <Clock 
                     deadline={this.state.deadline}
@@ -30,7 +30,7 @@ class App extends Component {
                 <Form inline>
                     <FormControl
                         className="Deadline-input"
-                        placeholder='new date'
+                        placeholder='Input the Date'
                         onChange={event => this.setState({ newDeadline: event.target.value })}
                     />
                     <Button onClick={() => this.changeDeadLine()}>Submit</Button>
